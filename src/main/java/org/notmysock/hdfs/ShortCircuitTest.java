@@ -88,7 +88,7 @@ public class ShortCircuitTest extends Configured implements Tool {
         FSDataInputStream in = fs.open(p);
         long t1 = System.currentTimeMillis();
         if(buf.length == 1) {
-          while(in.available() > 0) in.readUnsignedByte();
+          while(in.available() > 0) in.readByte();          
         } else {
           while(in.read(buf) !=  -1);
         }
