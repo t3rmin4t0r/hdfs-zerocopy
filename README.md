@@ -24,10 +24,10 @@ When checksums are disabled, we find performance degrades in HDFS data-client wh
 
 To test
 
-	$ hadoop jar target/shortcircuit-reader-1.0-SNAPSHOT.jar -i /user/hive/warehouse/tpcds_bin_flat_rc_10.db/store_sales/000000_0
+	$ hadoop jar target/zcr-reader-1.0-SNAPSHOT.jar -i /user/hive/warehouse/tpcds_bin_flat_rc_10.db/store_sales/000000_0 -zc
 
 versus
 
-	$ hadoop jar target/shortcircuit-reader-1.0-SNAPSHOT.jar --nochecksum -i /user/hive/warehouse/tpcds_bin_flat_rc_10.db/store_sales/000000_0
+	$ hadoop jar target/zcr-reader-1.0-SNAPSHOT.jar --nochecksum -i /user/hive/warehouse/tpcds_bin_flat_rc_10.db/store_sales/000000_0 -zc
 
 For my tests, checksum enabled ran in 37 seconds & the checksum disabled version ran in 183 seconds.
