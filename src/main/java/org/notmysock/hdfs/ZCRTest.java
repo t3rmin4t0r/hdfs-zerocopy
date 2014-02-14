@@ -118,6 +118,7 @@ public class ZCRTest extends Configured implements Tool {
           ByteBuffer bbuf = in.read(bfpool, (int)bs, rdopts);           
           in.releaseBuffer(bbuf);
         }
+        in.close();
         long size = in.getPos();
         long t2 = System.currentTimeMillis();
         context.write("Time Taken: ", (t2 - t1)+" ms");
